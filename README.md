@@ -10,7 +10,7 @@ Copy *spa-components* to your *src/components*
 #### Layout.astro example
 ```astro
 ---
-...
+// Other imports
 import Spa from "../components/spa-compoents/Spa.astro";
 import SpaScript from "../components/spa-compoents/SpaScript.astro";
 const { title } = Astro.props;
