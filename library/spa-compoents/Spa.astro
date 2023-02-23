@@ -1,0 +1,35 @@
+---
+import Start from "./Start.astro";
+import End from "./End.astro";
+const { pageTitle } = Astro.props;
+---
+
+<div id='__SPA'>
+    <div id='__ANIM'></div>
+    <Start />
+    <div id='__CONTENT' data-page_title={pageTitle}>
+        <slot />
+    </div>
+    <End />
+</div>
+
+<style>
+    #__SPA {
+        position: relative;
+    }
+    #__ANIM {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        pointer-events: none;
+        z-index: 100;
+        transition: all 0.2s ease-in-out;
+        background: transparent;
+    }
+    #__ANIM.anim {
+        backdrop-filter: blur(2px);
+        background: white;
+    }
+</style>
