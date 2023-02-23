@@ -8,7 +8,7 @@ Copy *spa.js* to your *public* dir\
 Copy *spa-components* to your *src/components*
 
 #### Layout.astro example
-```
+```astro
 ---
 ...
 import Spa from "../components/spa-compoents/Spa.astro";
@@ -32,7 +32,7 @@ const { title } = Astro.props;
 ```
 
 #### Using the SPA Anchor
-```
+```astro
 ---
 import Anchor from "./spa-compoents/Anchor.astro";
 ---
